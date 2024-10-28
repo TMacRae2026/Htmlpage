@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Funny Scripts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Random Funny Scripts</h1>
+    <button onclick="showRandomString()">Show Random String</button>
+    <button onclick="calculateCompoundInterest()">Calculate Compound Interest</button>
+    <button onclick="getRandomJoke()">Get Random Joke</button>
+    <button onclick="surpriseMe()">Surprise Me!</button>
+
+    <script>
+        function showRandomString() {
+            const strings = [
+                "Why did the scarecrow win an award? Because he was outstanding in his field!",
+                "I told my computer I needed a break, and now it won't stop sending me beach wallpapers!",
+                "Did you hear about the claustrophobic astronaut? He just needed a little space!",
+                "Why don’t skeletons fight each other? They don’t have the guts!"
+            ];
+            const randomString = strings[Math.floor(Math.random() * strings.length)];
+            alert(randomString);
+        }
+
+        function calculateCompoundInterest() {
+            const principal = prompt("Enter the principal amount:");
+            const rate = prompt("Enter the annual interest rate (in %):");
+            const time = prompt("Enter the time in years:");
+            if (principal && rate && time) {
+                const amount = principal * Math.pow((1 + rate / 100), time);
+                alert(`The total amount after ${time} years is $${amount.toFixed(2)}.`);
+            } else {
+                alert("Please enter valid inputs.");
+            }
+        }
+
+        function getRandomJoke() {
+            const jokes = [
+                "I'm on a whiskey diet. I've lost three days already!",
+                "I used to play piano by ear, but now I use my hands!",
+                "I told my wife she was drawing her eyebrows too high. She looked surprised!",
+                "I’m reading a book on anti-gravity. It’s impossible to put down!"
+            ];
+            const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+            alert(randomJoke);
+        }
+
+        function surpriseMe() {
+            const surprises = [
+                "🎉 Surprise! You're awesome!",
+                "🎈 Guess what? You're the best!",
+                "🎊 Just a reminder: You can do anything!",
+                "🌟 You are a star!"
+            ];
+            const randomSurprise = surprises[Math.floor(Math.random() * surprises.length)];
+            alert(randomSurprise);
+        }
+    </script>
+
+</body>
+</html>
